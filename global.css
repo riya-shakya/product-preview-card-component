@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: hsl(30, 38%, 92%);
+  --text-color: hsl(228, 12%, 48%);
+  --paragraph-font-family: "Montserrat", sans-serif;
+  --heading-font-family: "Fraunces", serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background-color);
+  font-family: var(--paragraph-font-family);
+}
+
+main {
+  margin: 5rem auto 1rem auto;
+  width: min(93%, 37.5rem);
+}
+
+.product-card {
+  --section-background-color: hsl(0, 0%, 100%);
+
+  background-color: var(--section-background-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 30%;
+  aspect-ratio: 1 / 1;
+}
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: space-between;
+}
+
+.product-card h2 {
+  font-family: var(--paragraph-font-family);
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-size: 0.75rem;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+}
+
+.product-card h1 {
+  font-family: var(--heading-font-family);
+  line-height: 1;
+}
+
+.product-card p {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+.product-price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.current-price {
+  --price-color: hsl(158, 36%, 37%);
+
+  color: var(--price-color);
+  font-family: var(--heading-font-family);
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-size: 0.75rem;
+  color: var(--text-color);
+}
+
+.add-to-cart {
+  --button-background-color: hsl(158, 36%, 37%);
+  --button-text-color: hsl(0, 0%, 100%);
+
+  padding: 1rem 2rem;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.add-to-cart img {
+  width: 0.875rem;
+  height: 1rem;
+}
+
+.add-to-cart span {
+  font-weight: 600;
+  font-size: 0.75rem;
+  font-family: var(--paragraph-font-family);
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    margin: auto;
+  }
+  .product-card {
+    display: flex;
+  }
+
+  .product-image {
+    max-width: 50%;
+    aspect-ratio: auto;
+  }
+
+  .product-text p {
+    line-height: 1.75;
+    letter-spacing: 0.037rem;
+  }
+}
