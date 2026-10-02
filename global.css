@@ -21,7 +21,7 @@ body {
 
 main {
   margin: 5rem auto 1rem auto;
-  width: min(93%, 37.5rem);
+  width: min(93.5%, 37.5rem);
 }
 
 .product-card {
@@ -35,16 +35,16 @@ main {
 .product-image {
   width: 100%;
   display: block;
-  object-fit: cover;
-  object-position: 50% 30%;
-  aspect-ratio: 1 / 1;
+  object-position: 50% 22%;
+  aspect-ratio: 1;
+  object-fit: none;
 }
 
 .product-text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 1.4rem;
+  padding: 1.5rem 2rem;
   justify-content: space-between;
 }
 
@@ -53,7 +53,7 @@ main {
   text-transform: uppercase;
   color: var(--text-color);
   font-size: 0.75rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.33rem;
   font-weight: 500;
 }
 
@@ -65,9 +65,9 @@ main {
 .product-card p {
   color: var(--text-color);
   font-size: 0.8rem;
-  line-height: 1.5;
+  line-height: 1.74;
   font-weight: 500;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.04rem;
 }
 
 .product-price {
@@ -89,6 +89,7 @@ main {
   text-decoration: line-through;
   font-size: 0.75rem;
   color: var(--text-color);
+  font-weight: 500;
 }
 
 .add-to-cart {
@@ -105,6 +106,12 @@ main {
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
+  font-size: 0.875rem;
+}
+
+.add-to-cart:hover,
+.add-to-cart:focus {
+  background-color: hsl(158, 36%, 30%);
 }
 
 .add-to-cart img {
@@ -114,7 +121,7 @@ main {
 
 .add-to-cart span {
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-family: var(--paragraph-font-family);
 }
 
@@ -135,12 +142,30 @@ main {
   }
 
   .product-image {
+    object-fit: cover;
     max-width: 50%;
     aspect-ratio: auto;
+  }
+
+  .product-text {
+    padding: 2rem 2rem 2rem 1.8rem;
+  }
+
+  .product-text h1 {
+    margin-top: -5px;
   }
 
   .product-text p {
     line-height: 1.75;
     letter-spacing: 0.037rem;
+    font-size: 0.807rem;
+  }
+
+  .product-price {
+    gap: 1.2rem;
+  }
+
+  .product-price .original-price {
+    font-size: 0.8rem;
   }
 }
