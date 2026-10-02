@@ -110,7 +110,8 @@ main {
 }
 
 .add-to-cart:hover,
-.add-to-cart:focus {
+.add-to-cart:focus,
+.add-to-cart:focus-visible {
   background-color: hsl(158, 36%, 30%);
 }
 
